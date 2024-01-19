@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Creation Button</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn">Create Circle</button>
+<div id="circleContainer"></div>
+
+<script>
+     document.querySelector('#btn').addEventListener('click',function(e){
+        const circle=document.createElement("div");
+        circle.className="circle";
+        circle.style.backgroundColor="blue";
+        document.getElementById("circleContainer").appendChild(circle);
+    })
+</script>
+
+</body>
+</html>
